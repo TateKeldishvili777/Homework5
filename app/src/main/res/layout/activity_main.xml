@@ -182,7 +182,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:text="totalruned"
+        android:text="totalrun"
         android:textSize="20sp"
         app:layout_constraintTop_toBottomOf="@+id/avgrun"/>
 
