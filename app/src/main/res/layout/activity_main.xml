@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8A8AFF"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/editTextNumber1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="გარბენილი მანძილი"
+        android:inputType="number"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SAVE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumber1"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/editTextNumber2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="გაცურული მანძილი"
+        app:layout_constraintTop_toBottomOf="@+id/button1"
+        android:inputType="number"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SAVE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumber2"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/editTextNumber3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="მიღებული კალორია"
+        app:layout_constraintTop_toBottomOf="@+id/button2"
+        android:inputType="number"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SAVE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumber3"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+    <Button
+        android:id="@+id/calculate"
+        android:layout_marginTop="80sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RUN DIST"
+        android:backgroundTint="#00FF00"
+        app:layout_constraintTop_toBottomOf="@+id/button3"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/calculate1"
+        android:layout_marginTop="80sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SWIM DIST"
+        android:backgroundTint="#00FF00"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button3"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/calculate2"
+        android:layout_marginTop="80sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CALORIES"
+        android:backgroundTint="#00FF00"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button3"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/avgrun"
+        android:layout_marginTop="20sp"
+        android:layout_width="100sp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/avgswim"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="avgrun"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/calculate"/>
+
+    <TextView
+        android:id="@+id/avgrunresult"
+        android:layout_width="100sp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/avgswim"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="-"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/avgrun"/>
+
+    <TextView
+        android:id="@+id/avgswim"
+        android:layout_marginTop="20sp"
+        android:layout_width="100sp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@+id/avgrun"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="avgswim"
+        android:layout_marginRight="10sp"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/calculate"/>
+
+    <TextView
+        android:id="@+id/avgswimresult"
+        android:layout_width="100sp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10sp"
+        app:layout_constraintLeft_toRightOf="@+id/avgrun"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="-"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/avgswim"/>
+
+    <TextView
+        android:id="@+id/avgcal"
+        android:layout_width="100sp"
+        android:layout_marginTop="20sp"
+        android:layout_marginLeft="10sp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@+id/avgswim"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="avgcal"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/calculate"/>
+
+    <TextView
+        android:id="@+id/avgcalresult"
+        android:layout_width="100sp"
+        android:layout_marginLeft="10sp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@+id/avgswim"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="-"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/avgcal"/>
+
+    <TextView
+        android:id="@+id/totalrun"
+        android:layout_marginTop="50sp"
+        android:layout_width="100sp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="totalruned"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/avgrun"/>
+
+    <TextView
+        android:id="@+id/totalrunresult"
+        android:layout_width="100sp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="-"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/totalrun"/>
+
+    <Button
+        android:id="@+id/clearData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CLEAR FULL DATA"
+        android:backgroundTint="#FF0000"
+        android:layout_marginTop="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/totalrunresult"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
